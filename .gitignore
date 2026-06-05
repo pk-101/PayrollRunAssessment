@@ -1,0 +1,32 @@
+# Build
+bin/
+obj/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Rider
+.idea/
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Logs
+*.log
+
+# Publish
+publish/
+
+# SQL LocalDB
+*.mdf
+*.ldf
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Secrets
+appsettings.Development.json

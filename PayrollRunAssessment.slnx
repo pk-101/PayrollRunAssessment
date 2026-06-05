@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Payroll.API/Payroll.API.csproj" />
+    <Project Path="src/Payroll.Application/Payroll.Application.csproj" />
+    <Project Path="src/Payroll.Infrastructure/Payroll.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Payroll.Tests/Payroll.Tests.csproj" />
+  </Folder>
+</Solution>
