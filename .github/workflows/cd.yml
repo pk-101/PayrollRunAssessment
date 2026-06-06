@@ -1,0 +1,39 @@
+name: CD
+
+on:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+
+jobs:
+  deploy:
+    name: Deploy to Production (placeholder)
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download CI artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: api-publish
+          path: ./publish
+
+      # The following deploy step is a placeholder for CD.
+      # Configure your target environment, secrets, or deployment provider to enable this.
+      - name: Deploy to Azure App Service
+        if: false
+        uses: azure/webapps-deploy@v4
+        with:
+          app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
+          package: ./publish
+
+      - name: CD guidance
+        run: |
+          echo "CD pipeline successfully downloaded the build artifact."
+          echo "Uncomment and configure the Azure deployment step once deployment secrets and target app are available."
