@@ -90,7 +90,7 @@ Example:
 ```json
 {
   "ConnectionStrings": {
-    "DefaultConnection": "Server=Acer\\SQLEXPRESS;Database=PayrollDB;Trusted_Connection=True;TrustServerCertificate=True;"
+    "DefaultConnection": "Server=localhost\\SQLEXPRESS;Database=PayrollDB;Trusted_Connection=True;TrustServerCertificate=True;"
   }
 }
 ```
